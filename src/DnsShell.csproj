@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7C82E66E-08F8-439A-B8C9-11EC08216ABC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DnsShell</RootNamespace>
+    <AssemblyName>DnsShell</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.Protocols" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Management.Automation, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Program Files\Reference Assemblies\Microsoft\WindowsPowerShell\v1.0\System.Management.Automation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ActiveDirectory\CmdLet\Remove-ADDnsRecord.cs" />
+    <Compile Include="ActiveDirectory\CmdLet\New-ADDnsRecord.cs" />
+    <Compile Include="ActiveDirectory\CmdLet\Remove-ADDnsZone.cs" />
+    <Compile Include="ActiveDirectory\CmdLet\New-ADDnsZone.cs" />
+    <Compile Include="ActiveDirectory\CmdLet\Set-ADDnsRecord.cs" />
+    <Compile Include="ActiveDirectory\CmdLet\Set-ADDnsZone.cs" />
+    <Compile Include="ActiveDirectory\CmdLet\Get-ADDnsPartition.cs" />
+    <Compile Include="ActiveDirectory\Partition.cs" />
+    <Compile Include="ActiveDirectory\Zone.cs" />
+    <Compile Include="ActiveDirectory\RecordTypes\A.cs" />
+    <Compile Include="ActiveDirectory\RecordTypes\AAAA.cs" />
+    <Compile Include="ActiveDirectory\RecordTypes\AFSDB.cs" />
+    <Compile Include="ActiveDirectory\RecordTypes\CNAME.cs" />
+    <Compile Include="ActiveDirectory\RecordTypes\ATMA.cs" />
+    <Compile Include="ActiveDirectory\RecordTypes\ISDN.cs" />
+    <Compile Include="ActiveDirectory\RecordTypes\HINFO.cs" />
+    <Compile Include="ActiveDirectory\RecordTypes\SRV.cs" />
+    <Compile Include="ActiveDirectory\RecordTypes\SOA.cs" />
+    <Compile Include="ActiveDirectory\RecordTypes\MX.cs" />
+    <Compile Include="ActiveDirectory\RecordTypes\NS.cs" />
+    <Compile Include="ActiveDirectory\ResourceRecord.cs" />
+    <Compile Include="ActiveDirectory\CmdLet\Base-AD.cs" />
+    <Compile Include="Management\CmdLet\Reset-DnsZoneType.cs" />
+    <Compile Include="Management\CmdLet\Set-DnsZoneTransfer.cs" />
+    <Compile Include="Management\CmdLet\Update-DnsZoneFile.cs" />
+    <Compile Include="Management\CmdLet\Resume-DnsZone.cs" />
+    <Compile Include="Management\CmdLet\Suspend-DnsZone.cs" />
+    <Compile Include="Management\CmdLet\New-DnsRecord.cs" />
+    <Compile Include="Management\CmdLet\Update-DnsZone.cs" />
+    <Compile Include="Management\CmdLet\Set-DnsRecord.cs" />
+    <Compile Include="Management\CmdLet\Get-DnsRecord.cs" />
+    <Compile Include="Management\CmdLet\Base-Management.cs" />
+    <Compile Include="Management\CmdLet\Start-DnsScavenging.cs" />
+    <Compile Include="Management\CmdLet\Start-DnsService.cs" />
+    <Compile Include="Management\CmdLet\Stop-DnsService.cs" />
+    <Compile Include="Resolver\RecordTypes\NSAP.cs" />
+    <Compile Include="Management\RecordTypes\X25.cs" />
+    <Compile Include="Management\RecordTypes\WKS.cs" />
+    <Compile Include="Management\RecordTypes\WINS.cs" />
+    <Compile Include="Management\RecordTypes\WINSR.cs" />
+    <Compile Include="Management\RecordTypes\TXT.cs" />
+    <Compile Include="Management\RecordTypes\SRV.cs" />
+    <Compile Include="Management\RecordTypes\SOA.cs" />
+    <Compile Include="Management\RecordTypes\SIG.cs" />
+    <Compile Include="Management\RecordTypes\RT.cs" />
+    <Compile Include="Management\RecordTypes\RP.cs" />
+    <Compile Include="Management\RecordTypes\PTR.cs" />
+    <Compile Include="Management\RecordTypes\NXT.cs" />
+    <Compile Include="Management\RecordTypes\NS.cs" />
+    <Compile Include="Management\RecordTypes\MX.cs" />
+    <Compile Include="Management\RecordTypes\MR.cs" />
+    <Compile Include="Management\RecordTypes\MINFO.cs" />
+    <Compile Include="Management\RecordTypes\MG.cs" />
+    <Compile Include="Management\RecordTypes\MF.cs" />
+    <Compile Include="Management\RecordTypes\MD.cs" />
+    <Compile Include="Management\RecordTypes\MB.cs" />
+    <Compile Include="Management\RecordTypes\KEY.cs" />
+    <Compile Include="Management\RecordTypes\HINFO.cs" />
+    <Compile Include="Management\RecordTypes\CNAME.cs" />
+    <Compile Include="Management\RecordTypes\ATMA.cs" />
+    <Compile Include="Management\RecordTypes\AFSDB.cs" />
+    <Compile Include="Management\RecordTypes\AAAA.cs" />
+    <Compile Include="Management\RecordTypes\A.cs" />
+    <Compile Include="Management\RecordTypes\ISDN.cs" />
+    <Compile Include="Management\ResourceRecord.cs" />
+    <Compile Include="Management\CmdLet\New-DnsZone.cs" />
+    <Compile Include="Management\CmdLet\Remove-DnsObject.cs" />
+    <Compile Include="Resolver\RecordTypes\ATMA.cs" />
+    <Compile Include="Resolver\RecordTypes\AFSDB.cs" />
+    <Compile Include="Resolver\RecordTypes\A.cs" />
+    <Compile Include="Resolver\RecordTypes\AAAA.cs" />
+    <Compile Include="Resolver\RecordTypes\CNAME.cs" />
+    <Compile Include="Resolver\RecordTypes\NULL.cs" />
+    <Compile Include="Resolver\EDns.cs" />
+    <Compile Include="Resolver\RecordTypes\PTR.cs" />
+    <Compile Include="Resolver\RecordTypes\RP.cs" />
+    <Compile Include="Resolver\RecordTypes\RT.cs" />
+    <Compile Include="Resolver\RecordTypes\SRV.cs" />
+    <Compile Include="Resolver\RecordTypes\SOA.cs" />
+    <Compile Include="Resolver\RecordTypes\NS.cs" />
+    <Compile Include="Resolver\RecordTypes\MX.cs" />
+    <Compile Include="Resolver\RecordTypes\MR.cs" />
+    <Compile Include="Resolver\RecordTypes\MINFO.cs" />
+    <Compile Include="Resolver\RecordTypes\MG.cs" />
+    <Compile Include="Resolver\RecordTypes\MF.cs" />
+    <Compile Include="Resolver\RecordTypes\MD.cs" />
+    <Compile Include="Resolver\RecordTypes\MB.cs" />
+    <Compile Include="Resolver\RecordTypes\ISDN.cs" />
+    <Compile Include="Resolver\RecordTypes\HINFO.cs" />
+    <Compile Include="Resolver\RecordTypes\TXT.cs" />
+    <Compile Include="Resolver\RecordTypes\WINSR.cs" />
+    <Compile Include="Resolver\RecordTypes\WINS.cs" />
+    <Compile Include="Management\CmdLet\Set-DnsServer.cs" />
+    <Compile Include="Management\CmdLet\Set-DnsZone.cs" />
+    <Compile Include="CommonClasses\BinaryReader.cs" />
+    <Compile Include="CommonClasses\BitConverter.cs" />
+    <Compile Include="ActiveDirectory\CmdLet\Get-ADDnsRecord.cs" />
+    <Compile Include="ActiveDirectory\CmdLet\Get-ADDnsZone.cs" />
+    <Compile Include="Management\CmdLet\Clear-DnsCache.cs" />
+    <Compile Include="Resolver\CmdLet\Get-Dns.cs" />
+    <Compile Include="Management\CmdLet\Get-DnsServer.cs" />
+    <Compile Include="Management\CmdLet\Get-DnsZone.cs" />
+    <Compile Include="Enum\MS-DNSP.cs" />
+    <Compile Include="Enum\Resolver.cs" />
+    <Compile Include="Enum\Management.cs" />
+    <Compile Include="Management\Cache.cs" />
+    <Compile Include="Management\RootHints.cs" />
+    <Compile Include="Management\Server.cs" />
+    <Compile Include="Management\Zone.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resolver\Header.cs" />
+    <Compile Include="Resolver\DnsPacket.cs" />
+    <Compile Include="Resolver\Question.cs" />
+    <Compile Include="Resolver\RData.cs" />
+    <Compile Include="Resolver\RecordTypes\WKS.cs" />
+    <Compile Include="Resolver\RecordTypes\X25.cs" />
+    <Compile Include="Resolver\ResourceRecord.cs" />
+    <Compile Include="CommonClasses\Utility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

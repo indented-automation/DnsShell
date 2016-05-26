@@ -1,0 +1,4285 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<helpItems schema="maml">
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+  <command:details>
+    <command:name>Get-DNS</command:name>
+
+    <maml:description>
+      <maml:para>DNS resolver.</maml:para>
+    </maml:description>
+    <maml:copyright>
+      <maml:para></maml:para>
+    </maml:copyright>
+
+    <command:verb>Get</command:verb>
+    <command:noun>Dns</command:noun>
+    <dev:version></dev:version>
+  </command:details>
+
+  <maml:description>
+    <maml:para>The Get-Dns cmdlet can be used to resolve DNS names.</maml:para>
+  </maml:description>
+
+  <!-- Cmdlet syntax section-->
+
+  <command:syntax>
+
+    <command:syntaxItem>
+      <maml:name>Get-Dns</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordType -->
+      <command:parameter required="false">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValue required="true">RecordType</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordClass -->
+      <command:parameter required="false">
+        <maml:name>RecordClass</maml:name>
+        <command:parameterValue required="false">RecordClass</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- NoRecursion -->
+      <command:parameter required="false">
+        <maml:name>NoRecursion</maml:name>
+      </command:parameter>
+
+      <!-- AppendToMultiLabel -->
+      <command:parameter required="false">
+        <maml:name>AppendToMultiLabel</maml:name>
+      </command:parameter>
+
+      <!-- SearchList -->
+      <command:parameter required="false">
+        <maml:name>SearchList</maml:name>
+        <command:parameterValue required="false">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Port -->
+      <command:parameter required="false">
+        <maml:name>Port</maml:name>
+        <command:parameterValue required="true">UInt16</command:parameterValue>
+      </command:parameter>
+
+      <!-- Tcp -->
+      <command:parameter required="false">
+        <maml:name>Tcp</maml:name>
+      </command:parameter>
+
+      <!-- TimeOut -->
+      <command:parameter required="false">
+        <maml:name>TimeOut</maml:name>
+        <command:parameterValue required="true">Byte</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+    <command:syntaxItem>
+      <maml:name>Get-Dns</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordType -->
+      <command:parameter required="false">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValue required="true">RecordType</command:parameterValue>
+      </command:parameter>
+
+      <!-- Iterative -->
+      <command:parameter required="true">
+        <maml:name>Iterative</maml:name>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Port -->
+      <command:parameter required="false">
+        <maml:name>Port</maml:name>
+        <command:parameterValue required="true">UInt16</command:parameterValue>
+      </command:parameter>
+
+      <!-- Tcp -->
+      <command:parameter required="false">
+        <maml:name>Tcp</maml:name>
+      </command:parameter>
+
+      <!-- TimeOut -->
+      <command:parameter required="false">
+        <maml:name>TimeOut</maml:name>
+        <command:parameterValue required="true">Byte</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+    <command:syntaxItem>
+      <maml:name>Get-Dns</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordType -->
+      <command:parameter required="false">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValue required="true">RecordType</command:parameterValue>
+      </command:parameter>
+
+      <!-- NSSearch -->
+      <command:parameter required="true">
+        <maml:name>NSSearch</maml:name>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Port -->
+      <command:parameter required="false">
+        <maml:name>Port</maml:name>
+        <command:parameterValue required="true">UInt16</command:parameterValue>
+      </command:parameter>
+
+      <!-- Tcp -->
+      <command:parameter required="false">
+        <maml:name>Tcp</maml:name>
+      </command:parameter>
+
+      <!-- TimeOut -->
+      <command:parameter required="false">
+        <maml:name>TimeOut</maml:name>
+        <command:parameterValue required="true">Byte</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+    <command:syntaxItem>
+      <maml:name>Get-Dns</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false" position="1">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- ZoneTransfer -->
+      <command:parameter required="true">
+        <maml:name>ZoneTransfer</maml:name>
+      </command:parameter>
+
+     <!-- Incremental -->
+      <command:parameter required="false">
+        <maml:name>Incremental</maml:name>
+        <command:parameterValue required="true">UInt32</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Port -->
+      <command:parameter required="false">
+        <maml:name>Port</maml:name>
+        <command:parameterValue required="true">UInt16</command:parameterValue>
+      </command:parameter>
+
+      <!-- TimeOut -->
+      <command:parameter required="false">
+        <maml:name>TimeOut</maml:name>
+        <command:parameterValue required="true">Byte</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+  </command:syntax>
+
+  <!-- Cmdlet parameter section -->
+
+  <command:parameters>
+
+    <!-- AppendToMultiLabel -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>AppendToMultiLabel</maml:name>
+      <maml:description>
+        <maml:para>Append a DNS Suffix Search List to the query even if the name appears to be fully qualified.</maml:para>
+      </maml:description>
+      <dev:type>
+        <maml:name>SwitchParameter</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>false</dev:defaultValue>
+    </command:parameter>
+
+    <!-- Incremental -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Incremental</maml:name>
+      <maml:description>
+        <maml:para>The serial number for an Incremental Zone Transfer (IXFR).</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">UInt16</command:parameterValue>
+      <dev:type>
+        <maml:name>UInt32</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Iterative -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Iterative</maml:name>
+      <maml:description>
+        <maml:para>Execute an Interative Query.</maml:para>
+      </maml:description>
+      <dev:type>
+        <maml:name>SwitchParameter</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>false</dev:defaultValue>
+    </command:parameter>
+
+    <!-- Name -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="1">
+      <maml:name>Name</maml:name>
+      <maml:description>
+        <maml:para>A DNS record or node name</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>.</dev:defaultValue>
+    </command:parameter>
+
+    <!-- NoRecursion -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>NoRecursion</maml:name>
+      <maml:description>
+        <maml:para>Do not request recursion for this query.</maml:para>
+      </maml:description>
+      <dev:type>
+        <maml:name>SwitchParameter</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>false</dev:defaultValue>
+    </command:parameter>
+
+    <!-- NSSearch -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>NSSearch</maml:name>
+      <maml:description>
+        <maml:para>Execute a query against all name servers for the zone.</maml:para>
+      </maml:description>
+      <dev:type>
+        <maml:name>SwitchParameter</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>false</dev:defaultValue>
+    </command:parameter>
+
+    <!-- Port -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Port</maml:name>
+      <maml:description>
+        <maml:para>Destination port.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">UInt16</command:parameterValue>
+      <dev:type>
+        <maml:name>UInt16</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>53</dev:defaultValue>
+    </command:parameter>
+
+    <!-- RecordClass -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>RecordType</maml:name>
+      <maml:description>
+        <maml:para>DNS Record Class. Get-Dns currently only uses the IN class.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">RecordClass</command:parameterValue>
+      <dev:type>
+        <maml:name>DnsShell.RecordClass</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>[DnsShell.RecordType]::IN</dev:defaultValue>
+    </command:parameter>
+
+    <!-- RecordType -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="2">
+      <maml:name>RecordType</maml:name>
+      <maml:description>
+        <maml:para>Record type, values defined by the DnsShell.RecordType enumeration.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">RecordType</command:parameterValue>
+      <dev:type>
+        <maml:name>DnsShell.RecordType</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>[DnsShell.RecordType]::Any</dev:defaultValue>
+    </command:parameter>
+
+    <!-- SearchList -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>SearchList</maml:name>
+      <maml:description>
+        <maml:para>A DNS suffix search list.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String[]</command:parameterValue>
+      <dev:type>
+        <maml:name>String[]</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>System DNS suffix search list</dev:defaultValue>
+    </command:parameter>
+
+    <!-- Server -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="named">
+      <maml:name>Server</maml:name>
+      <maml:description>
+        <maml:para>Specify the ServerName to operate on.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>localhost</dev:defaultValue>
+    </command:parameter>
+
+    <!-- Tcp -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Tcp</maml:name>
+      <maml:description>
+        <maml:para>Use TCP.</maml:para>
+      </maml:description>
+      <dev:type>
+        <maml:name>SwitchParameter</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>false</dev:defaultValue>
+    </command:parameter>
+
+    <!-- TimeOut -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>TimeOut</maml:name>
+      <maml:description>
+        <maml:para>Timeout in seconds for each query, permissible range is 1 to 30 seconds.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">Byte</command:parameterValue>
+      <dev:type>
+        <maml:name>Byte</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>5</dev:defaultValue>
+    </command:parameter>
+
+    <!-- ZoneTransfer -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>ZoneTransfer</maml:name>
+      <maml:description>
+        <maml:para>Request a Zone Transfer (AXFR or IXFR).</maml:para>
+      </maml:description>
+      <dev:type>
+        <maml:name>SwitchParameter</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>false</dev:defaultValue>
+    </command:parameter>
+
+  </command:parameters>
+
+  <!-- Input - Output section -->
+  <command:inputTypes />
+  <command:returnValues>
+    <command:returnValue>
+      <dev:type>
+        <maml:name>None or DnsShell.Resolver.DnsPacket</maml:name>
+        <maml:uri />
+        <maml:description />
+      </dev:type>   
+    </command:returnValue>
+  </command:returnValues>
+
+  <!-- Error section-->
+
+  <command:terminatingErrors />
+  <command:nonTerminatingErrors />
+
+  <!-- Notes section  -->
+
+  <maml:alertSet />
+
+  <!-- Example section  --> 
+
+  <command:examples>
+
+    <command:example>
+      <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+      <maml:introduction>
+        <maml:para>C:\PS&gt; </maml:para>
+      </maml:introduction> 
+      <dev:code>Get-Dns example.com</dev:code>
+      <dev:remarks>
+        <maml:para>Sends a request for ANY record in the example.com.</maml:para>
+      </dev:remarks>
+      <command:commandLines>
+        <command:commandLine>
+          <command:commandText></command:commandText>
+        </command:commandLine>
+      </command:commandLines>
+    </command:example>
+
+    <command:example>
+      <maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
+      <maml:introduction>
+        <maml:para>C:\PS&gt; </maml:para>
+      </maml:introduction> 
+      <dev:code>Get-Dns example.com -Iterative</dev:code>
+      <dev:remarks>
+        <maml:para>Shows resolution of the requested name from the Root servers</maml:para>
+      </dev:remarks>
+      <command:commandLines>
+        <command:commandLine>
+          <command:commandText></command:commandText>
+        </command:commandLine>
+      </command:commandLines>
+    </command:example>
+
+    <command:example>
+      <maml:title>-------------------------- EXAMPLE 3 --------------------------</maml:title>
+      <maml:introduction>
+        <maml:para>C:\PS&gt; </maml:para>
+      </maml:introduction> 
+      <dev:code>Get-Dns 0.168.192.in-addr.arpa ns -Iterative</dev:code>
+      <dev:remarks>
+        <maml:para>Shows resolution of the name servers for the reverse lookup zone via root hints.</maml:para>
+      </dev:remarks>
+      <command:commandLines>
+        <command:commandLine>
+          <command:commandText></command:commandText>
+        </command:commandLine>
+      </command:commandLines>
+    </command:example>
+
+    <command:example>
+      <maml:title>-------------------------- EXAMPLE 4 --------------------------</maml:title>
+      <maml:introduction>
+        <maml:para>C:\PS&gt; </maml:para>
+      </maml:introduction> 
+      <dev:code>Get-Dns example.com a -NsSearch -Verbose</dev:code>
+      <dev:remarks>
+        <maml:para>Shows resolution of the reverse lookup zone for a private IP range via root hints ending at prisoner.iana.org.</maml:para>
+      </dev:remarks>
+      <command:commandLines>
+        <command:commandLine>
+          <command:commandText></command:commandText>
+        </command:commandLine>
+      </command:commandLines>
+    </command:example>
+
+    <command:example>
+      <maml:title>-------------------------- EXAMPLE 5 --------------------------</maml:title>
+      <maml:introduction>
+        <maml:para>C:\PS&gt; </maml:para>
+      </maml:introduction> 
+      <dev:code>Get-Dns example.com -ZoneTransfer -Server 10.0.0.1</dev:code>
+      <dev:remarks>
+        <maml:para>Request a zone transfer of example.com from the specified server.</maml:para>
+      </dev:remarks>
+      <command:commandLines>
+        <command:commandLine>
+          <command:commandText></command:commandText>
+        </command:commandLine>
+      </command:commandLines>
+    </command:example>
+
+    <command:example>
+      <maml:title>-------------------------- EXAMPLE 6 --------------------------</maml:title>
+      <maml:introduction>
+        <maml:para>C:\PS&gt; </maml:para>
+      </maml:introduction> 
+      <dev:code>Get-Dns example.com -ZoneTransfer -Incremental 3 -Server 10.0.0.1</dev:code>
+      <dev:remarks>
+        <maml:para>Request an incremental zone transfer of example.com from the specified server starting with serial number 3.</maml:para>
+      </dev:remarks>
+      <command:commandLines>
+        <command:commandLine>
+          <command:commandText></command:commandText>
+        </command:commandLine>
+      </command:commandLines>
+    </command:example>
+
+  </command:examples>
+
+  <!-- Link section  -->
+  <maml:relatedLinks />
+</command:command>
+
+<!-- Clear-DnsCache -->
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+  <command:details>
+    <command:name>Clear-DnsCache</command:name>
+
+    <maml:description>
+      <maml:para>Clear the DNS Cache on the specified server</maml:para>
+    </maml:description>
+    <maml:copyright>
+      <maml:para></maml:para>
+    </maml:copyright>
+
+    <command:verb>Clear</command:verb>
+    <command:noun>DnsCache</command:noun>
+    <dev:version></dev:version>
+  </command:details>
+
+  <maml:description>
+    <maml:para>Clear-DnsCache uses the WMI class MicrosoftDNS_Cache to clear the DNS Cache on the specified server. This CmdLet does not generate any output.</maml:para>
+  </maml:description>
+
+  <!-- Cmdlet syntax section-->
+
+  <command:syntax>
+
+    <command:syntaxItem>
+      <maml:name>Clear-DnsCache</maml:name>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+  </command:syntax>
+
+  <!-- Cmdlet parameter section -->
+
+  <command:parameters>
+
+    <!-- Credential -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Credential</maml:name>
+      <maml:description>
+        <maml:para>Specify credentials with permission to perform this action.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">PSCredential</command:parameterValue>
+      <dev:type>
+        <maml:name>PSCredential</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Server -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="1">
+      <maml:name>Server</maml:name>
+      <maml:description>
+        <maml:para>Specify the ServerName(s) to operate on.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String[]</command:parameterValue>
+      <dev:type>
+        <maml:name>String[]</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>localhost</dev:defaultValue>
+    </command:parameter>
+
+  </command:parameters>
+
+  <!-- Input - Output section -->
+  <command:inputTypes />
+  <command:returnValues />
+
+  <!-- Error section-->
+
+  <command:terminatingErrors />
+  <command:nonTerminatingErrors />
+
+  <!-- Notes section  -->
+
+  <maml:alertSet />
+
+  <!-- Example section  --> 
+
+  <command:examples>
+
+    <command:example>
+      <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+      <maml:introduction>
+        <maml:para>C:\PS&gt; </maml:para>
+      </maml:introduction> 
+      <dev:code>Clear-DnsCache server.example.com</dev:code>
+      <dev:remarks>
+        <maml:para>Clears the DNS cache on the specified server(s).</maml:para>
+      </dev:remarks>
+      <command:commandLines>
+        <command:commandLine>
+          <command:commandText></command:commandText>
+        </command:commandLine>
+      </command:commandLines>
+    </command:example>
+
+    <command:example>
+      <maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
+      <maml:introduction>
+        <maml:para>C:\PS&gt; </maml:para>
+      </maml:introduction> 
+      <dev:code>Clear-DnsCache server.example.com -Credential $(Get-Credential)</dev:code>
+      <dev:remarks>
+        <maml:para>Clears the DNS cache on the specified server(s) using the requested credential.</maml:para>
+      </dev:remarks>
+      <command:commandLines>
+        <command:commandLine>
+          <command:commandText></command:commandText>
+        </command:commandLine>
+      </command:commandLines>
+    </command:example>
+
+  </command:examples>
+
+  <!-- Link section  -->
+  <maml:relatedLinks />
+</command:command>
+
+<!-- Get-DnsRecord -->
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+  <command:details>
+    <command:name>Get-DnsRecord</command:name>
+
+    <maml:description>
+      <maml:para>Returns DNS Records using the MicrosoftDNS WMI namespace.</maml:para>
+    </maml:description>
+    <maml:copyright>
+      <maml:para></maml:para>
+    </maml:copyright>
+
+    <command:verb>Get</command:verb>
+    <command:noun>DnsRecord</command:noun>
+    <dev:version></dev:version>
+  </command:details>
+
+  <maml:description>
+    <maml:para>Get-DnsRecord returns DNS Records from the specified server.</maml:para>
+  </maml:description>
+
+  <!-- Cmdlet syntax section-->
+
+  <command:syntax>
+
+    <command:syntaxItem>
+      <maml:name>Get-DnsRecord</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordType -->
+      <command:parameter required="false">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValue required="true">WmiRecordType</command:parameterValue>
+      </command:parameter>
+
+      <!-- ZoneName -->
+      <command:parameter required="false">
+        <maml:name>ZoneName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+    <command:syntaxItem>
+      <maml:name>Get-DnsRecord</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordType -->
+      <command:parameter required="false">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValue required="true">WmiRecordType</command:parameterValue>
+      </command:parameter>
+
+      <!-- Cache -->
+      <command:parameter required="false">
+        <maml:name>Cache</maml:name>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+    <command:syntaxItem>
+      <maml:name>Get-DnsRecord</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordType -->
+      <command:parameter required="false">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValue required="true">WmiRecordType</command:parameterValue>
+      </command:parameter>
+
+      <!-- RootHints -->
+      <command:parameter required="false">
+        <maml:name>RootHints</maml:name>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+    <command:syntaxItem>
+      <maml:name>Get-DnsRecord</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordType -->
+      <command:parameter required="false">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValue required="true">WmiRecordType</command:parameterValue>
+      </command:parameter>
+
+      <!-- Filter -->
+      <command:parameter required="false">
+        <maml:name>Filter</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+  </command:syntax>
+
+  <!-- Cmdlet parameter section -->
+
+  <command:parameters>
+
+    <!-- Cache -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Cache</maml:name>
+      <maml:description>
+        <maml:para>Only return records from the DNS Cache.</maml:para>
+      </maml:description>
+      <dev:type>
+        <maml:name>SwitchParameter</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>false</dev:defaultValue>
+    </command:parameter>
+
+    <!-- Credential -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Credential</maml:name>
+      <maml:description>
+        <maml:para>Specify credentials with permission to perform this action.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">PSCredential</command:parameterValue>
+      <dev:type>
+        <maml:name>PSCredential</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Filter -->
+    <command:parameter required="false" pipelineInput="false" globbing="true" position="named">
+      <maml:name>Filter</maml:name>
+      <maml:description>
+        <maml:para>A WQL based filter string. By default the filter exclues Root Hints and Cached records. If * is used a wildcard it will be replaced with %.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>"NOT ContainerName LIKE '..%'"</dev:defaultValue>
+    </command:parameter>
+
+    <!-- Name -->
+    <command:parameter required="false" pipelineInput="true" globbing="true" position="1">
+      <maml:name>Name</maml:name>
+      <maml:description>
+        <maml:para>A regular expression used to match a record name.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>.</dev:defaultValue>
+    </command:parameter>
+
+    <!-- RecordType -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="2">
+      <maml:name>RecordType</maml:name>
+      <maml:description>
+        <maml:para>Record type, values defined by the DnsShell.WmiRecordType enumeration.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">WmiRecordType</command:parameterValue>
+      <dev:type>
+        <maml:name>DnsShell.WmiRecordType</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- RootHints -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>RootHints</maml:name>
+      <maml:description>
+        <maml:para>Only return Root Hints.</maml:para>
+      </maml:description>
+      <dev:type>
+        <maml:name>SwitchParameter</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>false</dev:defaultValue>
+    </command:parameter>
+
+    <!-- Server -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="named">
+      <maml:name>Server</maml:name>
+      <maml:description>
+        <maml:para>Specify the ServerName(s) to operate on.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String[]</command:parameterValue>
+      <dev:type>
+        <maml:name>String[]</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>localhost</dev:defaultValue>
+    </command:parameter>
+
+    <!-- ZoneName -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>ZoneName</maml:name>
+      <maml:description>
+        <maml:para>A zone name.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+  </command:parameters>
+
+  <!-- Input - Output section -->
+  <command:inputTypes />
+  <command:returnValues>
+    <command:returnValue>
+      <dev:type>
+        <maml:name>None or classes inheriting DnsShell.Management.ResourceRecord</maml:name>
+        <maml:uri />
+        <maml:description />
+      </dev:type>   
+    </command:returnValue>
+  </command:returnValues>
+
+  <!-- Error section-->
+
+  <command:terminatingErrors />
+  <command:nonTerminatingErrors />
+
+  <!-- Notes section  -->
+
+  <maml:alertSet />
+
+  <!-- Example section  --> 
+
+  <command:examples>
+
+    <command:example>
+      <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+      <maml:introduction>
+        <maml:para>C:\PS&gt; </maml:para>
+      </maml:introduction> 
+      <dev:code>Get-DnsRecord</dev:code>
+      <dev:remarks>
+        <maml:para>List all records.</maml:para>
+      </dev:remarks>
+      <command:commandLines>
+        <command:commandLine>
+          <command:commandText></command:commandText>
+        </command:commandLine>
+      </command:commandLines>
+    </command:example>
+
+    <command:example>
+      <maml:title>-------------------------- EXAMPLE 2 --------------------------</maml:title>
+      <maml:introduction>
+        <maml:para>C:\PS&gt; </maml:para>
+      </maml:introduction> 
+      <dev:code>Get-DnsRecord computername a</dev:code>
+      <dev:remarks>
+        <maml:para>List the A records matching computername in all zones on the local system.</maml:para>
+      </dev:remarks>
+      <command:commandLines>
+        <command:commandLine>
+          <command:commandText></command:commandText>
+        </command:commandLine>
+      </command:commandLines>
+    </command:example>
+
+  </command:examples>
+
+  <!-- Link section  -->
+  <maml:relatedLinks />
+</command:command>
+
+<!-- Get-DnsServer -->
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+  <command:details>
+    <command:name>Get-DnsServer</command:name>
+
+    <maml:description>
+      <maml:para>Return settings from the specified DNS server.</maml:para>
+    </maml:description>
+    <maml:copyright>
+      <maml:para></maml:para>
+    </maml:copyright>
+
+    <command:verb>Get</command:verb>
+    <command:noun>DnsServer</command:noun>
+    <dev:version></dev:version>
+  </command:details>
+
+  <maml:description>
+    <maml:para>Get-DnsServer uses MicrosoftDNS_Server and Win32_Registry to return the full set of DNS Server settings.</maml:para>
+  </maml:description>
+
+  <!-- Cmdlet syntax section-->
+
+  <command:syntax>
+
+    <command:syntaxItem>
+      <maml:name>Get-DnsServer</maml:name>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+  </command:syntax>
+
+  <!-- Cmdlet parameter section -->
+
+  <command:parameters>
+
+    <!-- Credential -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Credential</maml:name>
+      <maml:description>
+        <maml:para>Specify credentials with permission to perform this action.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">PSCredential</command:parameterValue>
+      <dev:type>
+        <maml:name>PSCredential</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Server -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="1">
+      <maml:name>Server</maml:name>
+      <maml:description>
+        <maml:para>Specify the ServerName(s) to operate on.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String[]</command:parameterValue>
+      <dev:type>
+        <maml:name>String[]</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>localhost</dev:defaultValue>
+    </command:parameter>
+
+  </command:parameters>
+
+  <!-- Input - Output section -->
+  <command:inputTypes />
+  <command:returnValues />
+
+  <!-- Error section-->
+
+  <command:terminatingErrors />
+  <command:nonTerminatingErrors />
+
+  <!-- Notes section  -->
+
+  <maml:alertSet />
+
+  <!-- Example section  --> 
+
+  <command:examples>
+
+    <command:example>
+      <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+      <maml:introduction>
+        <maml:para>C:\PS&gt; </maml:para>
+      </maml:introduction> 
+      <dev:code>Clear-DnsServer server.example.com</dev:code>
+      <dev:remarks>
+        <maml:para></maml:para>
+      </dev:remarks>
+      <command:commandLines>
+        <command:commandLine>
+          <command:commandText></command:commandText>
+        </command:commandLine>
+      </command:commandLines>
+    </command:example>
+
+  </command:examples>
+
+  <!-- Link section  -->
+  <maml:relatedLinks />
+</command:command>
+
+<!-- Get-DnsZone -->
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+  <command:details>
+    <command:name>Get-DnsZone</command:name>
+
+    <maml:description>
+      <maml:para>Returns settings for a Zone.</maml:para>
+    </maml:description>
+    <maml:copyright>
+      <maml:para></maml:para>
+    </maml:copyright>
+
+    <command:verb>Get</command:verb>
+    <command:noun>DnsZone</command:noun>
+    <dev:version></dev:version>
+  </command:details>
+
+  <maml:description>
+    <maml:para>Get-DnsZone uses MicrosoftDNS_Zone to return the full set of DNS Zone settings.</maml:para>
+  </maml:description>
+
+  <!-- Cmdlet syntax section-->
+
+  <command:syntax>
+
+    <command:syntaxItem>
+      <maml:name>Get-DnsZone</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Filter -->
+      <command:parameter required="false">
+        <maml:name>Filter</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+  </command:syntax>
+
+  <!-- Cmdlet parameter section -->
+
+  <command:parameters>
+
+    <!-- Credential -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Credential</maml:name>
+      <maml:description>
+        <maml:para>Specify credentials with permission to perform this action.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">PSCredential</command:parameterValue>
+      <dev:type>
+        <maml:name>PSCredential</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Filter -->
+    <command:parameter required="false" pipelineInput="false" globbing="true" position="named">
+      <maml:name>Filter</maml:name>
+      <maml:description>
+        <maml:para>A WQL based filter string.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>"NOT ContainerName LIKE '..%'"</dev:defaultValue>
+    </command:parameter>
+
+    <!-- Name -->
+    <command:parameter required="false" pipelineInput="false" globbing="true" position="0">
+      <maml:name>Name</maml:name>
+      <maml:description>
+        <maml:para>A zone name.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Server -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="1">
+      <maml:name>Server</maml:name>
+      <maml:description>
+        <maml:para>Specify the ServerName(s) to operate on.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String[]</command:parameterValue>
+      <dev:type>
+        <maml:name>String[]</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>localhost</dev:defaultValue>
+    </command:parameter>
+
+  </command:parameters>
+
+  <!-- Input - Output section -->
+  <command:inputTypes />
+  <command:returnValues />
+
+  <!-- Error section-->
+
+  <command:terminatingErrors />
+  <command:nonTerminatingErrors />
+
+  <!-- Notes section  -->
+
+  <maml:alertSet />
+
+  <!-- Example section  --> 
+
+  <command:examples>
+
+    <command:example>
+      <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+      <maml:introduction>
+        <maml:para>C:\PS&gt; </maml:para>
+      </maml:introduction> 
+      <dev:code>Clear-DnsZone -Server server.example.com</dev:code>
+      <dev:remarks>
+        <maml:para>Clears the DNS cache on the specified server(s).</maml:para>
+      </dev:remarks>
+      <command:commandLines>
+        <command:commandLine>
+          <command:commandText></command:commandText>
+        </command:commandLine>
+      </command:commandLines>
+    </command:example>
+
+  </command:examples>
+
+  <!-- Link section  -->
+  <maml:relatedLinks />
+</command:command>
+
+<!-- New-DnsRecord -->
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+  <command:details>
+    <command:name>New-DnsRecord</command:name>
+
+    <maml:description>
+      <maml:para>Creates a new DNS Record.</maml:para>
+    </maml:description>
+    <maml:copyright>
+      <maml:para></maml:para>
+    </maml:copyright>
+
+    <command:verb>New</command:verb>
+    <command:noun>DnsRecord</command:noun>
+    <dev:version></dev:version>
+  </command:details>
+
+  <maml:description>
+    <maml:para>New-DnsRecord creates a DNS record using the record type classes in WMI and the CreateInstanceFromPropertyData method.</maml:para>
+  </maml:description>
+
+  <!-- Cmdlet syntax section-->
+
+  <command:syntax>
+
+    <!-- A, AAAA, WKS -->
+    <command:syntaxItem>
+      <maml:name>New-DnsRecord</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordType -->
+      <command:parameter required="true">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValueGroup>
+          <command:parameterValue required="true">A</command:parameterValue>
+          <command:parameterValue required="true">AAAA</command:parameterValue>
+          <command:parameterValue required="true">WKS</command:parameterValue>
+        </command:parameterValueGroup>
+      </command:parameter>
+
+      <!-- ZoneName -->
+      <command:parameter required="true">
+        <maml:name>ZoneName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- TTL -->
+      <command:parameter required="false">
+        <maml:name>TTL</maml:name>
+        <command:parameterValue required="true">UInt32</command:parameterValue>
+      </command:parameter>
+
+      <!-- IPAddress -->
+      <command:parameter required="true">
+        <maml:name>IPAddress</maml:name>
+        <command:parameterValue required="true">IPAddress</command:parameterValue>
+      </command:parameter>
+
+      <!-- Services -->
+      <command:parameter required="false">
+        <maml:name>Services</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- IPProtocol -->
+      <command:parameter required="false">
+        <maml:name>IPProtocol</maml:name>
+        <command:parameterValue required="true">IPProtocol</command:parameterValue>
+        <command:parameterValueGroup>
+          <command:parameterValue required="true">Tcp</command:parameterValue>
+          <command:parameterValue required="true">Udp</command:parameterValue>
+        </command:parameterValueGroup>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+      <!-- PassThru -->
+      <command:parameter required="false">
+        <maml:name>PassThru</maml:name>
+      </command:parameter>
+    </command:syntaxItem>
+
+    <!-- CNAME, MB, MD, MF, NS, PTR -->
+    <command:syntaxItem>
+      <maml:name>New-DnsRecord</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordType -->
+      <command:parameter required="true">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValueGroup>
+          <command:parameterValue required="true">CNAME</command:parameterValue>
+          <command:parameterValue required="true">MB</command:parameterValue>
+          <command:parameterValue required="true">MD</command:parameterValue>
+          <command:parameterValue required="true">MF</command:parameterValue>
+          <command:parameterValue required="true">NS</command:parameterValue>
+          <command:parameterValue required="true">PTR</command:parameterValue>
+        </command:parameterValueGroup>
+      </command:parameter>
+
+      <!-- ZoneName -->
+      <command:parameter required="true">
+        <maml:name>ZoneName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- TTL -->
+      <command:parameter required="false">
+        <maml:name>TTL</maml:name>
+        <command:parameterValue required="true">UInt32</command:parameterValue>
+      </command:parameter>
+
+      <!-- Hostname -->
+      <command:parameter required="true">
+        <maml:name>Hostname</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+      <!-- PassThru -->
+      <command:parameter required="false">
+        <maml:name>PassThru</maml:name>
+      </command:parameter>
+    </command:syntaxItem>
+
+    <!-- MG, MR -->
+    <command:syntaxItem>
+      <maml:name>New-DnsRecord</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordType -->
+      <command:parameter required="true">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValueGroup>
+          <command:parameterValue required="true">MG</command:parameterValue>
+          <command:parameterValue required="true">MR</command:parameterValue>
+        </command:parameterValueGroup>
+      </command:parameter>
+
+      <!-- ZoneName -->
+      <command:parameter required="true">
+        <maml:name>ZoneName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- TTL -->
+      <command:parameter required="false">
+        <maml:name>TTL</maml:name>
+        <command:parameterValue required="true">UInt32</command:parameterValue>
+      </command:parameter>
+
+      <!-- MailboxName -->
+      <command:parameter required="true">
+        <maml:name>MailboxName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+      <!-- PassThru -->
+      <command:parameter required="false">
+        <maml:name>PassThru</maml:name>
+      </command:parameter>
+    </command:syntaxItem>
+
+    <!-- TXT -->
+    <command:syntaxItem>
+      <maml:name>New-DnsRecord</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordType -->
+      <command:parameter required="true">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValue required="true">TXT</command:parameterValue>
+      </command:parameter>
+
+      <!-- ZoneName -->
+      <command:parameter required="true">
+        <maml:name>ZoneName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- TTL -->
+      <command:parameter required="false">
+        <maml:name>TTL</maml:name>
+        <command:parameterValue required="true">UInt32</command:parameterValue>
+      </command:parameter>
+
+      <!-- Text -->
+      <command:parameter required="true">
+        <maml:name>Text</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+      <!-- PassThru -->
+      <command:parameter required="false">
+        <maml:name>PassThru</maml:name>
+      </command:parameter>
+    </command:syntaxItem>
+
+    <!-- HINFO -->
+    <command:syntaxItem>
+      <maml:name>New-DnsRecord</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordType -->
+      <command:parameter required="true">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValue required="true">HINFO</command:parameterValue>
+      </command:parameter>
+
+      <!-- ZoneName -->
+      <command:parameter required="true">
+        <maml:name>ZoneName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- TTL -->
+      <command:parameter required="false">
+        <maml:name>TTL</maml:name>
+        <command:parameterValue required="true">UInt32</command:parameterValue>
+      </command:parameter>
+
+      <!-- CPU -->
+      <command:parameter required="true">
+        <maml:name>CPU</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- OS -->
+      <command:parameter required="true">
+        <maml:name>OS</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+      <!-- PassThru -->
+      <command:parameter required="false">
+        <maml:name>PassThru</maml:name>
+      </command:parameter>
+    </command:syntaxItem>
+
+    <!-- ISDN -->
+    <command:syntaxItem>
+      <maml:name>New-DnsRecord</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordType -->
+      <command:parameter required="false">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValue required="true">ISDN</command:parameterValue>
+      </command:parameter>
+
+      <!-- ZoneName -->
+      <command:parameter required="false">
+        <maml:name>ZoneName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- TTL -->
+      <command:parameter required="false">
+        <maml:name>TTL</maml:name>
+        <command:parameterValue required="true">UInt32</command:parameterValue>
+      </command:parameter>
+
+      <!-- ISDNNumber -->
+      <command:parameter required="true">
+        <maml:name>ISDNNumber</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- SubAddress -->
+      <command:parameter required="false">
+        <maml:name>SubAddress</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+      <!-- PassThru -->
+      <command:parameter required="false">
+        <maml:name>PassThru</maml:name>
+      </command:parameter>
+    </command:syntaxItem>
+
+    <!-- MINFO -->
+    <command:syntaxItem>
+      <maml:name>New-DnsRecord</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordType -->
+      <command:parameter required="true">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValue required="true">MINFO</command:parameterValue>
+      </command:parameter>
+
+      <!-- ZoneName -->
+      <command:parameter required="true">
+        <maml:name>ZoneName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- TTL -->
+      <command:parameter required="false">
+        <maml:name>TTL</maml:name>
+        <command:parameterValue required="true">UInt32</command:parameterValue>
+      </command:parameter>
+
+      <!-- ResponsibleMailbox -->
+      <command:parameter required="true">
+        <maml:name>ResponsibleMailbox</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- ErrorMailbox -->
+      <command:parameter required="true">
+        <maml:name>ErrorMailbox</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+      <!-- PassThru -->
+      <command:parameter required="false">
+        <maml:name>PassThru</maml:name>
+      </command:parameter>
+    </command:syntaxItem>
+
+    <!-- RP -->
+    <command:syntaxItem>
+      <maml:name>New-DnsRecord</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordType -->
+      <command:parameter required="true">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValue required="true">RP</command:parameterValue>
+      </command:parameter>
+
+      <!-- ZoneName -->
+      <command:parameter required="true">
+        <maml:name>ZoneName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- TTL -->
+      <command:parameter required="false">
+        <maml:name>TTL</maml:name>
+        <command:parameterValue required="true">UInt32</command:parameterValue>
+      </command:parameter>
+
+      <!-- ResponsibleMailbox -->
+      <command:parameter required="true">
+        <maml:name>ResponsibleMailbox</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- TXTDomainName -->
+      <command:parameter required="true">
+        <maml:name>TXTDomainName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>  
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+      <!-- PassThru -->
+      <command:parameter required="false">
+        <maml:name>PassThru</maml:name>
+      </command:parameter>
+    </command:syntaxItem>
+
+    <!-- AFSDB -->
+    <command:syntaxItem>
+      <maml:name>New-DnsRecord</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordType -->
+      <command:parameter required="true">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValue required="true">AFSDB</command:parameterValue>
+      </command:parameter>
+
+      <!-- ZoneName -->
+      <command:parameter required="true">
+        <maml:name>ZoneName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- TTL -->
+      <command:parameter required="false">
+        <maml:name>TTL</maml:name>
+        <command:parameterValue required="true">UInt32</command:parameterValue>
+      </command:parameter>
+
+      <!-- TargetName -->
+      <command:parameter required="true">
+        <maml:name>TargetName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- SubType -->
+      <command:parameter required="true">
+        <maml:name>SubType</maml:name>
+        <command:parameterValue required="true">UInt16</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+      <!-- PassThru -->
+      <command:parameter required="false">
+        <maml:name>PassThru</maml:name>
+      </command:parameter>
+    </command:syntaxItem>
+
+    <!-- MX, RT -->
+    <command:syntaxItem>
+      <maml:name>New-DnsRecord</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordType -->
+      <command:parameter required="true">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValueGroup>
+          <command:parameterValue required="true">MX</command:parameterValue>
+          <command:parameterValue required="true">RT</command:parameterValue>
+        </command:parameterValueGroup>
+      </command:parameter>
+
+      <!-- ZoneName -->
+      <command:parameter required="true">
+        <maml:name>ZoneName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- TTL -->
+      <command:parameter required="false">
+        <maml:name>TTL</maml:name>
+        <command:parameterValue required="true">UInt32</command:parameterValue>
+      </command:parameter>
+
+      <!-- TargetName -->
+      <command:parameter required="true">
+        <maml:name>TargetName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Preference -->
+      <command:parameter required="true">
+        <maml:name>Preference</maml:name>
+        <command:parameterValue required="true">UInt16</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+      <!-- PassThru -->
+      <command:parameter required="false">
+        <maml:name>PassThru</maml:name>
+      </command:parameter>
+    </command:syntaxItem>
+
+    <!-- X25 -->
+    <command:syntaxItem>
+      <maml:name>New-DnsRecord</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordType -->
+      <command:parameter required="true">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValue required="true">X25</command:parameterValue>
+      </command:parameter>
+
+      <!-- ZoneName -->
+      <command:parameter required="true">
+        <maml:name>ZoneName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- TTL -->
+      <command:parameter required="false">
+        <maml:name>TTL</maml:name>
+        <command:parameterValue required="true">UInt32</command:parameterValue>
+      </command:parameter>
+
+      <!-- PSDNAddress -->
+      <command:parameter required="true">
+        <maml:name>PSDNAddress</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+      <!-- PassThru -->
+      <command:parameter required="false">
+        <maml:name>PassThru</maml:name>
+      </command:parameter>
+    </command:syntaxItem>
+
+    <!-- SRV -->
+    <command:syntaxItem>
+      <maml:name>New-DnsRecord</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- RecordType -->
+      <command:parameter required="true">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValue required="true">SRV</command:parameterValue>
+      </command:parameter>
+
+      <!-- ZoneName -->
+      <command:parameter required="true">
+        <maml:name>ZoneName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- TTL -->
+      <command:parameter required="false">
+        <maml:name>TTL</maml:name>
+        <command:parameterValue required="true">UInt32</command:parameterValue>
+      </command:parameter>
+
+      <!-- TargetName -->
+      <command:parameter required="true">
+        <maml:name>TargetName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Priority -->
+      <command:parameter required="false">
+        <maml:name>Priority</maml:name>
+        <command:parameterValue required="true">UInt16</command:parameterValue>
+      </command:parameter>
+
+      <!-- Weight -->
+      <command:parameter required="false">
+        <maml:name>Weight</maml:name>
+        <command:parameterValue required="true">UInt16</command:parameterValue>
+      </command:parameter>
+
+      <!-- Port -->
+      <command:parameter required="true">
+        <maml:name>Port</maml:name>
+        <command:parameterValue required="true">UInt16</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+      <!-- PassThru -->
+      <command:parameter required="false">
+        <maml:name>PassThru</maml:name>
+      </command:parameter>
+    </command:syntaxItem>
+
+    <!-- WINS -->
+    <command:syntaxItem>
+      <maml:name>New-DnsRecord</maml:name>
+
+      <!-- RecordType -->
+      <command:parameter required="true">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValue required="true">WINS</command:parameterValue>
+      </command:parameter>
+
+      <!-- ZoneName -->
+      <command:parameter required="true">
+        <maml:name>ZoneName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- TTL -->
+      <command:parameter required="false">
+        <maml:name>TTL</maml:name>
+        <command:parameterValue required="true">UInt32</command:parameterValue>
+      </command:parameter>
+
+      <!-- WinsServers -->
+      <command:parameter required="true">
+        <maml:name>WinsServers</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- MappingFlag -->
+      <command:parameter required="false">
+        <maml:name>MappingFlag</maml:name>
+        <command:parameterValue required="true">WINSMappingFlag</command:parameterValue>
+      </command:parameter>
+
+      <!-- LookupTimeout -->
+      <command:parameter required="false">
+        <maml:name>LookupTimeout</maml:name>
+        <command:parameterValue required="true">UInt32</command:parameterValue>
+      </command:parameter>
+
+      <!-- CacheTimeout -->
+      <command:parameter required="false">
+        <maml:name>CacheTimeout</maml:name>
+        <command:parameterValue required="true">UInt32</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+      <!-- PassThru -->
+      <command:parameter required="false">
+        <maml:name>PassThru</maml:name>
+      </command:parameter>
+    </command:syntaxItem>
+
+    <!-- WINSR -->
+    <command:syntaxItem>
+      <maml:name>New-DnsRecord</maml:name>
+
+      <!-- RecordType -->
+      <command:parameter required="true">
+        <maml:name>RecordType</maml:name>
+        <command:parameterValue required="true">WINS</command:parameterValue>
+      </command:parameter>
+
+      <!-- ZoneName -->
+      <command:parameter required="true">
+        <maml:name>ZoneName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- TTL -->
+      <command:parameter required="false">
+        <maml:name>TTL</maml:name>
+        <command:parameterValue required="true">UInt32</command:parameterValue>
+      </command:parameter>
+
+      <!-- ResultDomain -->
+      <command:parameter required="true">
+        <maml:name>ResultDomain</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- MappingFlag -->
+      <command:parameter required="false">
+        <maml:name>MappingFlag</maml:name>
+        <command:parameterValue required="true">WINSMappingFlag</command:parameterValue>
+      </command:parameter>
+
+      <!-- LookupTimeout -->
+      <command:parameter required="false">
+        <maml:name>LookupTimeout</maml:name>
+        <command:parameterValue required="true">UInt32</command:parameterValue>
+      </command:parameter>
+
+      <!-- CacheTimeout -->
+      <command:parameter required="false">
+        <maml:name>CacheTimeout</maml:name>
+        <command:parameterValue required="true">UInt32</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+      <!-- PassThru -->
+      <command:parameter required="false">
+        <maml:name>PassThru</maml:name>
+      </command:parameter>
+    </command:syntaxItem>
+  </command:syntax>
+
+  <!-- Cmdlet parameter section -->
+
+  <command:parameters>
+
+    <!-- CacheTimeout -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>CacheTimeout</maml:name>
+      <maml:description>
+        <maml:para>Cache timeout in seconds for WINS lookups. Used for creation of WINS and WINSR records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">UInt32</command:parameterValue>
+      <dev:type>
+        <maml:name>UInt32</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>900</dev:defaultValue>
+    </command:parameter>
+
+    <!-- Credential -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Credential</maml:name>
+      <maml:description>
+        <maml:para>Specify credentials with permission to perform this action.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">PSCredential</command:parameterValue>
+      <dev:type>
+        <maml:name>PSCredential</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- CPU -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>CPU</maml:name>
+      <maml:description>
+        <maml:para>The CPU of the host. One of CPU or OS must be supplied for creation of HINFO record.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- ErrorMailbox -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>ErrorMailbox</maml:name>
+      <maml:description>
+        <maml:para>Error Mailbox name. Required for creation of MINFO records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Hostname -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Hostname</maml:name>
+      <maml:description>
+        <maml:para>The hostname the record refers to. Required for creation of CNAME, MB, MD, MF, NS and PTR records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- IPAddress -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>IPAddress</maml:name>
+      <maml:description>
+        <maml:para>Specify new IP Address. Required for creation of A, AAAA and WKS records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">IPAddress</command:parameterValue>
+      <dev:type>
+        <maml:name>IPAddress</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+    
+    <!-- IPProtocol -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>IPProtocol</maml:name>
+      <maml:description>
+        <maml:para>Specify new IP Address. Required for creation of A, AAAA and WKS records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>Tcp</dev:defaultValue>
+    </command:parameter>
+
+    <!-- ISDNNumber -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>ISDNNumber</maml:name>
+      <maml:description>
+        <maml:para>The ISDN Number. Required for creation of ISDN records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- LookupTimeout -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>LookupTimeout</maml:name>
+      <maml:description>
+        <maml:para>The lookup timeout in seconds applied when forwarding to WINS. Used for creation of WINS and WINSR records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">UInt32</command:parameterValue>
+      <dev:type>
+        <maml:name>UInt32</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>2</dev:defaultValue>
+    </command:parameter>
+
+    <!-- MailboxName -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>MailboxName</maml:name>
+      <maml:description>
+        <maml:para>Mailbox Name. Required for creation of MG and MR records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- MappingFlag -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>MappingFlag</maml:name>
+      <maml:description>
+        <maml:para>WINS Mapping Flag, determines whether the record is replicated or not. Used for creation fo WINS and WINSR records. By default records are replicated.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">MappingFlag</command:parameterValue>
+      <dev:type>
+        <maml:name>MappingFlag</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>[DnsShell.MappingFlag]::Replication</dev:defaultValue>
+    </command:parameter>
+
+    <!-- Name -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Name</maml:name>
+      <maml:description>
+        <maml:para>The name of the record to create relative to the zone. If blank or @ the zone name will be used.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>@</dev:defaultValue>
+    </command:parameter>
+
+    <!-- OS -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>OS</maml:name>
+      <maml:description>
+        <maml:para>The Operating System of the host. One of CPU or OS must be supplied for creation of HINFO record.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- PassThru -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>PassThru</maml:name>
+      <maml:description>
+        <maml:para>By default New-DnsRecord does not return any output. Adding the PassThru parameter will cause New-DnsRecord to return a representation of the new record.</maml:para>
+      </maml:description>
+      <dev:type>
+        <maml:name>SwitchParameter</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>false</dev:defaultValue>
+    </command:parameter>
+
+    <!-- Port -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Port</maml:name>
+      <maml:description>
+        <maml:para>Port number. Required for creation of SRV records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">UInt16</command:parameterValue>
+      <dev:type>
+        <maml:name>UInt16</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Preference -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Preference</maml:name>
+      <maml:description>
+        <maml:para>Record preference. Required for creation of MX and RT records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">UInt16</command:parameterValue>
+      <dev:type>
+        <maml:name>UInt16</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Priority -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Priority</maml:name>
+      <maml:description>
+        <maml:para>Record priority. Optional value when creating SRV records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">UInt16</command:parameterValue>
+      <dev:type>
+        <maml:name>UInt16</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>0</dev:defaultValue>
+    </command:parameter>
+
+    <!-- PSDNAddress -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>PSDNAddress</maml:name>
+      <maml:description>
+        <maml:para>PSDN Address. Required for creation of X25 records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- RecordType -->
+    <command:parameter required="true" pipelineInput="true" globbing="false" position="named">
+      <maml:name>RecordType</maml:name>
+      <maml:description>
+        <maml:para>The record type to create, where permissible record types are defined by the DnsShell.WmiRecordType enumeration.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">WmiRecordType</command:parameterValue>
+      <dev:type>
+        <maml:name>WmiRecordType</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- ResponsibleMailbox -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>ResponsibleMailbox</maml:name>
+      <maml:description>
+        <maml:para>Responsible Mailbox. Required for creation of MINFO and RP records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- ResultDomain -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>ResultDomain</maml:name>
+      <maml:description>
+        <maml:para>WINSR result domain. Required for creation of WINSR records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Server -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="named">
+      <maml:name>Server</maml:name>
+      <maml:description>
+        <maml:para>Specify the ServerName(s) to operate on.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>localhost</dev:defaultValue>
+    </command:parameter>
+
+    <!-- Services -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Services</maml:name>
+      <maml:description>
+        <maml:para>A list of service names. Required for creation of WKS records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String[]</command:parameterValue>
+      <dev:type>
+        <maml:name>String[]</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>Tcp</dev:defaultValue>
+    </command:parameter>
+
+    <!-- SubAddress -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>SubAddress</maml:name>
+      <maml:description>
+        <maml:para>The sub-address of an ISDN number. Optional value when creating ISDN records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- SubType -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>SubType</maml:name>
+      <maml:description>
+        <maml:para>AFSDB Sub-type. Required for creation of AFSDB records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">UInt16</command:parameterValue>
+      <dev:type>
+        <maml:name>UInt16</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- TargetName -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>TargetName</maml:name>
+      <maml:description>
+        <maml:para>Target host name. Required for creation of AFSDB, MX and SRV records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Text -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Text</maml:name>
+      <maml:description>
+        <maml:para>A text string. Required for creation of TXT records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- TTL -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>TTL</maml:name>
+      <maml:description>
+        <maml:para>The record TTL. If not specified the record will inherit the minimum TTL configured in the SOA record for the zone.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">UInt32</command:parameterValue>
+      <dev:type>
+        <maml:name>UInt32</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- TXTDomainName -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>TXTDomainName</maml:name>
+      <maml:description>
+        <maml:para>TXT Domain Name. Required for creation of RP records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Weight -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Weight</maml:name>
+      <maml:description>
+        <maml:para>Relative record weight. Optional value when creating SRV records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">UInt16</command:parameterValue>
+      <dev:type>
+        <maml:name>UInt16</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>100</dev:defaultValue>
+    </command:parameter>
+
+    <!-- WinsServers -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>WinsServers</maml:name>
+      <maml:description>
+        <maml:para>WINS server list. Required for creation of WINS records.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String[]</command:parameterValue>
+      <dev:type>
+        <maml:name>String[]</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- ZoneName -->
+    <command:parameter required="true" pipelineInput="false" globbing="false" position="named">
+      <maml:name>ZoneName</maml:name>
+      <maml:description>
+        <maml:para>The new record will be created within the specified zone.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+  </command:parameters>
+
+  <!-- Input - Output section -->
+  <command:inputTypes />
+  <command:returnValues />
+
+  <!-- Error section-->
+
+  <command:terminatingErrors />
+  <command:nonTerminatingErrors />
+
+  <!-- Notes section  -->
+
+  <maml:alertSet />
+
+  <!-- Example section  --> 
+
+  <command:examples />
+
+  <!-- Link section  -->
+  <maml:relatedLinks />
+</command:command>
+
+<!-- New-DnsZone -->
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+  <command:details>
+    <command:name>New-DnsZone</command:name>
+
+    <maml:description>
+      <maml:para>Creates a DNS Zone.</maml:para>
+    </maml:description>
+    <maml:copyright>
+      <maml:para></maml:para>
+    </maml:copyright>
+
+    <command:verb>New</command:verb>
+    <command:noun>DnsZone</command:noun>
+    <dev:version></dev:version>
+  </command:details>
+
+  <maml:description>
+    <maml:para>New-DnsZone creates a DNS Zone using the WMI class MicrosoftDNS_Zone and the CreateZone method.</maml:para>
+  </maml:description>
+
+  <!-- Cmdlet syntax section-->
+
+  <command:syntax>
+
+    <command:syntaxItem>
+      <maml:name>New-DnsZone</maml:name>
+
+      <!-- ZoneName -->
+      <command:parameter required="true" pipelineInput="true">
+        <maml:name>ZoneName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- ZoneType -->
+      <command:parameter required="true" pipelineInput="true">
+        <maml:name>ZoneType</maml:name>
+        <command:parameterValue required="true">ZoneType</command:parameterValue>
+      </command:parameter>
+
+      <!-- ResponsiblePerson -->
+      <command:parameter required="false">
+        <maml:name>ResponsiblePerson</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- FileName -->
+      <command:parameter required="false">
+        <maml:name>FileName</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- ADIntegrated -->
+      <command:parameter required="false">
+        <maml:name>ADIntegrated</maml:name>
+      </command:parameter>
+
+      <!-- MasterServer -->
+      <command:parameter required="false">
+        <maml:name>MasterServer</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+      <!-- PassThru -->
+      <command:parameter required="false">
+        <maml:name>PassThru</maml:name>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+  </command:syntax>
+
+  <!-- Cmdlet parameter section -->
+
+  <command:parameters>
+
+    <!-- ADIntegrated -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="named">
+      <maml:name>FileName</maml:name>
+      <maml:description>
+        <maml:para>The zone file name.</maml:para>
+      </maml:description>
+      <dev:type>
+        <maml:name>SwitchParameter</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>false</dev:defaultValue>
+    </command:parameter>
+
+    <!-- Credential -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Credential</maml:name>
+      <maml:description>
+        <maml:para>Specify credentials with permission to perform this action.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">PSCredential</command:parameterValue>
+      <dev:type>
+        <maml:name>PSCredential</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- FileName -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="named">
+      <maml:name>FileName</maml:name>
+      <maml:description>
+        <maml:para>The zone file name.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>&lt;ZoneName&gt;.dns</dev:defaultValue>
+    </command:parameter>
+
+    <!-- MasterServer -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="named">
+      <maml:name>MasterServer</maml:name>
+      <maml:description>
+        <maml:para>The Master Server list required when created a Secondary, Stub or Conditional Forwarder zones.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String[]</command:parameterValue>
+      <dev:type>
+        <maml:name>String[]</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- PassThru -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>PassThru</maml:name>
+      <maml:description>
+        <maml:para>By default New-DnsRecord does not return any output. Adding the PassThru parameter will cause New-DnsRecord to return a representation of the new record.</maml:para>
+      </maml:description>
+      <dev:type>
+        <maml:name>SwitchParameter</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>false</dev:defaultValue>
+    </command:parameter>
+
+    <!-- ResponsiblePerson -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="named">
+      <maml:name>ResponsiblePerson</maml:name>
+      <maml:description>
+        <maml:para>Responsible Person to be used in the SOA Record.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>Hostmaster.&lt;ZoneName&gt;</dev:defaultValue>
+    </command:parameter>
+
+    <!-- Server -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="named">
+      <maml:name>Server</maml:name>
+      <maml:description>
+        <maml:para>Specify the ServerName(s) to operate on.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>localhost</dev:defaultValue>
+    </command:parameter>
+
+    <!-- ZoneName -->
+    <command:parameter required="true" pipelineInput="true" globbing="false" position="1">
+      <maml:name>ZoneName</maml:name>
+      <maml:description>
+        <maml:para>The zone name.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- ZoneType -->
+    <command:parameter required="true" pipelineInput="true" globbing="false" position="2">
+      <maml:name>ZoneType</maml:name>
+      <maml:description>
+        <maml:para>Zone Type as defined in DnsShell.ZoneType enumeration.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>ZoneType</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+  </command:parameters>
+
+  <!-- Input - Output section -->
+  <command:inputTypes />
+  <command:returnValues />
+
+  <!-- Error section -->
+  <command:terminatingErrors />
+  <command:nonTerminatingErrors />
+
+  <!-- Notes section -->
+  <maml:alertSet />
+
+  <!-- Example section --> 
+  <command:examples />
+
+  <!-- Link section -->
+  <maml:relatedLinks />
+</command:command>
+
+<!-- Update-DnsZone -->
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+  <command:details>
+    <command:name>Update-DnsZone</command:name>
+
+    <maml:description>
+      <maml:para>Forces a Secondary Zone to refresh or a Primary Zone to reload.</maml:para>
+    </maml:description>
+    <maml:copyright>
+      <maml:para></maml:para>
+    </maml:copyright>
+
+    <command:verb>Update</command:verb>
+    <command:noun>DnsZone</command:noun>
+    <dev:version></dev:version>
+  </command:details>
+
+  <maml:description>
+    <maml:para>Update-DnsZone calls the UpdateFromDS method on an AD Integrated Primary Zone, ReloadZone on a Standard Primary or ForceRefresh on a Secondary zone.</maml:para>
+  </maml:description>
+
+  <!-- Cmdlet syntax section-->
+
+  <command:syntax>
+
+    <command:syntaxItem>
+      <maml:name>Update-DnsZone</maml:name>
+
+      <!-- Identity -->
+      <command:parameter required="true">
+        <maml:name>Identity</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+  </command:syntax>
+
+  <!-- Cmdlet parameter section -->
+
+  <command:parameters>
+
+    <!-- Credential -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Credential</maml:name>
+      <maml:description>
+        <maml:para>Specify credentials with permission to perform this action.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">PSCredential</command:parameterValue>
+      <dev:type>
+        <maml:name>PSCredential</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Identity -->
+    <command:parameter required="true" pipelineInput="true" globbing="false" position="named">
+      <maml:name>Identity</maml:name>
+      <maml:description>
+        <maml:para>WMI Management Path used to identify the zone. Accepts Identity Property returned by Get-DnsZone.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Server -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="1">
+      <maml:name>Server</maml:name>
+      <maml:description>
+        <maml:para>Specify the ServerName to operate on.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>localhost</dev:defaultValue>
+    </command:parameter>
+
+  </command:parameters>
+
+  <!-- Input - Output section -->
+  <command:inputTypes />
+  <command:returnValues />
+
+  <!-- Error section-->
+
+  <command:terminatingErrors />
+  <command:nonTerminatingErrors />
+
+  <!-- Notes section  -->
+
+  <maml:alertSet />
+
+  <!-- Example section  --> 
+
+  <command:examples>
+
+    <command:example>
+      <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+      <maml:introduction>
+        <maml:para>C:\PS&gt; </maml:para>
+      </maml:introduction> 
+      <dev:code>Get-DnsZone -Name example.com | Update-DnsZone</dev:code>
+      <dev:remarks>
+        <maml:para>Forces the Secondary zone example.com to refresh.</maml:para>
+      </dev:remarks>
+      <command:commandLines>
+        <command:commandLine>
+          <command:commandText></command:commandText>
+        </command:commandLine>
+      </command:commandLines>
+    </command:example>
+
+  </command:examples>
+
+  <!-- Link section  -->
+  <maml:relatedLinks />
+</command:command>
+
+<!-- Remove-DnsObject -->
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+  <command:details>
+    <command:name>Remove-DnsObject</command:name>
+
+    <maml:description>
+      <maml:para>Delete a DNS object.</maml:para>
+    </maml:description>
+    <maml:copyright>
+      <maml:para></maml:para>
+    </maml:copyright>
+
+    <command:verb>Remove</command:verb>
+    <command:noun>DnsObject</command:noun>
+    <dev:version></dev:version>
+  </command:details>
+
+  <maml:description>
+    <maml:para>Deletes a the DNS object specified by the Identity (Management Path) and server.</maml:para>
+  </maml:description>
+
+  <!-- Cmdlet syntax section-->
+
+  <command:syntax>
+
+    <command:syntaxItem>
+      <maml:name>Remove-DnsObject</maml:name>
+
+      <!-- Identity -->
+      <command:parameter required="true">
+        <maml:name>Identity</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+      <!-- Force -->
+      <command:parameter required="false">
+        <maml:name>Force</maml:name>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+  </command:syntax>
+
+  <!-- Cmdlet parameter section -->
+
+  <command:parameters>
+
+    <!-- Credential -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Credential</maml:name>
+      <maml:description>
+        <maml:para>Specify credentials with permission to perform this action.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">PSCredential</command:parameterValue>
+      <dev:type>
+        <maml:name>PSCredential</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Force -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Force</maml:name>
+      <maml:description>
+        <maml:para>Bypass confirmation request.</maml:para>
+      </maml:description>
+      <dev:type>
+        <maml:name>SwitchParameter</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>false</dev:defaultValue>
+    </command:parameter>
+
+    <!-- Identity -->
+    <command:parameter required="true" pipelineInput="true" globbing="false" position="named">
+      <maml:name>Identity</maml:name>
+      <maml:description>
+        <maml:para>WMI Management Path used to identify the object. Accepts Identity Property returned by Get-DnsRecord or Get-DnsZone.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Server -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="named">
+      <maml:name>Server</maml:name>
+      <maml:description>
+        <maml:para>Specify the ServerName(s) to operate on.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>localhost</dev:defaultValue>
+    </command:parameter>
+
+  </command:parameters>
+
+  <!-- Input - Output section -->
+  <command:inputTypes />
+  <command:returnValues />
+
+  <!-- Error section -->
+  <command:terminatingErrors />
+  <command:nonTerminatingErrors />
+
+  <!-- Notes section -->
+  <maml:alertSet />
+
+  <!-- Example section --> 
+  <command:examples />
+
+  <!-- Link section -->
+  <maml:relatedLinks />
+</command:command>
+
+<!-- Resume-DnsZone -->
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+  <command:details>
+    <command:name>Resume-DnsZone</command:name>
+
+    <maml:description>
+      <maml:para>Resumes a paused DNS zone.</maml:para>
+    </maml:description>
+    <maml:copyright>
+      <maml:para></maml:para>
+    </maml:copyright>
+
+    <command:verb>Resume</command:verb>
+    <command:noun>DnsZone</command:noun>
+    <dev:version></dev:version>
+  </command:details>
+
+  <maml:description>
+    <maml:para>Resume-DnsZone calls the ResumeZone method on an instance of MicrosoftDNS_Zone.</maml:para>
+  </maml:description>
+
+  <!-- Cmdlet syntax section-->
+
+  <command:syntax>
+
+    <command:syntaxItem>
+      <maml:name>Resume-DnsZone</maml:name>
+
+      <!-- Identity -->
+      <command:parameter required="true">
+        <maml:name>Identity</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+  </command:syntax>
+
+  <!-- Cmdlet parameter section -->
+
+  <command:parameters>
+
+    <!-- Credential -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Credential</maml:name>
+      <maml:description>
+        <maml:para>Specify credentials with permission to perform this action.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">PSCredential</command:parameterValue>
+      <dev:type>
+        <maml:name>PSCredential</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Identity -->
+    <command:parameter required="true" pipelineInput="true" globbing="false" position="named">
+      <maml:name>Identity</maml:name>
+      <maml:description>
+        <maml:para>WMI Management Path used to identify the zone. Accepts Identity Property returned by Get-DnsZone.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Server -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="1">
+      <maml:name>Server</maml:name>
+      <maml:description>
+        <maml:para>Specify the ServerName to operate on.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>localhost</dev:defaultValue>
+    </command:parameter>
+
+  </command:parameters>
+
+  <!-- Input - Output section -->
+  <command:inputTypes />
+  <command:returnValues />
+
+  <!-- Error section-->
+
+  <command:terminatingErrors />
+  <command:nonTerminatingErrors />
+
+  <!-- Notes section  -->
+
+  <maml:alertSet />
+
+  <!-- Example section  --> 
+
+  <command:examples>
+
+    <command:example>
+      <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+      <maml:introduction>
+        <maml:para>C:\PS&gt; </maml:para>
+      </maml:introduction> 
+      <dev:code>Get-DnsZone -Name example.com | Resume-DnsZone</dev:code>
+      <dev:remarks>
+        <maml:para>Resumes the paused example.com zone.</maml:para>
+      </dev:remarks>
+      <command:commandLines>
+        <command:commandLine>
+          <command:commandText></command:commandText>
+        </command:commandLine>
+      </command:commandLines>
+    </command:example>
+
+  </command:examples>
+
+  <!-- Link section  -->
+  <maml:relatedLinks />
+</command:command>
+
+<!-- Start-DnsScavenging -->
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+  <command:details>
+    <command:name>Start-DnsScavenging</command:name>
+
+    <maml:description>
+      <maml:para>Starts the Scavenging process on the specified server.</maml:para>
+    </maml:description>
+    <maml:copyright>
+      <maml:para></maml:para>
+    </maml:copyright>
+
+    <command:verb>Start</command:verb>
+    <command:noun>DnsScavenging</command:noun>
+    <dev:version></dev:version>
+  </command:details>
+
+  <maml:description>
+    <maml:para>Start-DnsScavenging calls the StartScavenging method on MicrosoftDNS_Server. This CmdLet does not generate any output.</maml:para>
+  </maml:description>
+
+  <!-- Cmdlet syntax section-->
+
+  <command:syntax>
+
+    <command:syntaxItem>
+      <maml:name>Start-DnsScavenging</maml:name>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+  </command:syntax>
+
+  <!-- Cmdlet parameter section -->
+
+  <command:parameters>
+
+    <!-- Credential -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Credential</maml:name>
+      <maml:description>
+        <maml:para>Specify credentials with permission to perform this action.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">PSCredential</command:parameterValue>
+      <dev:type>
+        <maml:name>PSCredential</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Server -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="1">
+      <maml:name>Server</maml:name>
+      <maml:description>
+        <maml:para>Specify the ServerName(s) to operate on.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String[]</command:parameterValue>
+      <dev:type>
+        <maml:name>String[]</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>localhost</dev:defaultValue>
+    </command:parameter>
+
+  </command:parameters>
+
+  <!-- Input - Output section -->
+  <command:inputTypes />
+  <command:returnValues />
+
+  <!-- Error section-->
+
+  <command:terminatingErrors />
+  <command:nonTerminatingErrors />
+
+  <!-- Notes section  -->
+
+  <maml:alertSet />
+
+  <!-- Example section  --> 
+
+  <command:examples>
+
+    <command:example>
+      <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+      <maml:introduction>
+        <maml:para>C:\PS&gt; </maml:para>
+      </maml:introduction> 
+      <dev:code>Start-DnsScavenging server.example.com</dev:code>
+      <dev:remarks>
+        <maml:para>Starts the scavenging process on server.example.com.</maml:para>
+      </dev:remarks>
+      <command:commandLines>
+        <command:commandLine>
+          <command:commandText></command:commandText>
+        </command:commandLine>
+      </command:commandLines>
+    </command:example>
+
+  </command:examples>
+
+  <!-- Link section  -->
+  <maml:relatedLinks />
+</command:command>
+
+<!-- Start-DnsService -->
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+  <command:details>
+    <command:name>Start-DnsService</command:name>
+
+    <maml:description>
+      <maml:para>Starts the DNS Service on the specified server.</maml:para>
+    </maml:description>
+    <maml:copyright>
+      <maml:para></maml:para>
+    </maml:copyright>
+
+    <command:verb>Start</command:verb>
+    <command:noun>DnsService</command:noun>
+    <dev:version></dev:version>
+  </command:details>
+
+  <maml:description>
+    <maml:para>Start-DnsService calls the StartService method on MicrosoftDNS_Server. This CmdLet does not generate any output.</maml:para>
+  </maml:description>
+
+  <!-- Cmdlet syntax section-->
+
+  <command:syntax>
+
+    <command:syntaxItem>
+      <maml:name>Start-DnsService</maml:name>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+  </command:syntax>
+
+  <!-- Cmdlet parameter section -->
+
+  <command:parameters>
+
+    <!-- Credential -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Credential</maml:name>
+      <maml:description>
+        <maml:para>Specify credentials with permission to perform this action.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">PSCredential</command:parameterValue>
+      <dev:type>
+        <maml:name>PSCredential</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Server -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="1">
+      <maml:name>Server</maml:name>
+      <maml:description>
+        <maml:para>Specify the ServerName(s) to operate on.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String[]</command:parameterValue>
+      <dev:type>
+        <maml:name>String[]</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>localhost</dev:defaultValue>
+    </command:parameter>
+
+  </command:parameters>
+
+  <!-- Input - Output section -->
+  <command:inputTypes />
+  <command:returnValues />
+
+  <!-- Error section-->
+
+  <command:terminatingErrors />
+  <command:nonTerminatingErrors />
+
+  <!-- Notes section  -->
+
+  <maml:alertSet />
+
+  <!-- Example section  --> 
+
+  <command:examples>
+
+    <command:example>
+      <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+      <maml:introduction>
+        <maml:para>C:\PS&gt; </maml:para>
+      </maml:introduction> 
+      <dev:code>Start-DnsService server.example.com</dev:code>
+      <dev:remarks>
+        <maml:para>Starts the DNS service on server.example.com.</maml:para>
+      </dev:remarks>
+      <command:commandLines>
+        <command:commandLine>
+          <command:commandText></command:commandText>
+        </command:commandLine>
+      </command:commandLines>
+    </command:example>
+
+  </command:examples>
+
+  <!-- Link section  -->
+  <maml:relatedLinks />
+</command:command>
+
+<!-- Stop-DnsService -->
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+  <command:details>
+    <command:name>Stop-DnsService</command:name>
+
+    <maml:description>
+      <maml:para>Stops the DNS Service on the specified server.</maml:para>
+    </maml:description>
+    <maml:copyright>
+      <maml:para></maml:para>
+    </maml:copyright>
+
+    <command:verb>Stop</command:verb>
+    <command:noun>DnsService</command:noun>
+    <dev:version></dev:version>
+  </command:details>
+
+  <maml:description>
+    <maml:para>Stop-DnsService calls the StopService method on MicrosoftDNS_Server. This CmdLet does not generate any output.</maml:para>
+  </maml:description>
+
+  <!-- Cmdlet syntax section-->
+
+  <command:syntax>
+
+    <command:syntaxItem>
+      <maml:name>Stop-DnsService</maml:name>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String[]</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+  </command:syntax>
+
+  <!-- Cmdlet parameter section -->
+
+  <command:parameters>
+
+    <!-- Credential -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Credential</maml:name>
+      <maml:description>
+        <maml:para>Specify credentials with permission to perform this action.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">PSCredential</command:parameterValue>
+      <dev:type>
+        <maml:name>PSCredential</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Server -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="1">
+      <maml:name>Server</maml:name>
+      <maml:description>
+        <maml:para>Specify the ServerName(s) to operate on.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String[]</command:parameterValue>
+      <dev:type>
+        <maml:name>String[]</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>localhost</dev:defaultValue>
+    </command:parameter>
+
+  </command:parameters>
+
+  <!-- Input - Output section -->
+  <command:inputTypes />
+  <command:returnValues />
+
+  <!-- Error section-->
+
+  <command:terminatingErrors />
+  <command:nonTerminatingErrors />
+
+  <!-- Notes section  -->
+
+  <maml:alertSet />
+
+  <!-- Example section  --> 
+
+  <command:examples>
+
+    <command:example>
+      <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+      <maml:introduction>
+        <maml:para>C:\PS&gt; </maml:para>
+      </maml:introduction> 
+      <dev:code>Stop-DnsService server.example.com</dev:code>
+      <dev:remarks>
+        <maml:para>Stops the DNS service on server.example.com.</maml:para>
+      </dev:remarks>
+      <command:commandLines>
+        <command:commandLine>
+          <command:commandText></command:commandText>
+        </command:commandLine>
+      </command:commandLines>
+    </command:example>
+
+  </command:examples>
+
+  <!-- Link section  -->
+  <maml:relatedLinks />
+</command:command>
+
+<!-- Suspend-DnsZone -->
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+  <command:details>
+    <command:name>Suspend-DnsZone</command:name>
+
+    <maml:description>
+      <maml:para>Pauses a running DNS zone.</maml:para>
+    </maml:description>
+    <maml:copyright>
+      <maml:para></maml:para>
+    </maml:copyright>
+
+    <command:verb>Suspend</command:verb>
+    <command:noun>DnsZone</command:noun>
+    <dev:version></dev:version>
+  </command:details>
+
+  <maml:description>
+    <maml:para>Suspend-DnsZone calls the PauseZone method on an instance of MicrosoftDNS_Zone.</maml:para>
+  </maml:description>
+
+  <!-- Cmdlet syntax section-->
+
+  <command:syntax>
+
+    <command:syntaxItem>
+      <maml:name>Suspend-DnsZone</maml:name>
+
+      <!-- Identity -->
+      <command:parameter required="true">
+        <maml:name>Identity</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+  </command:syntax>
+
+  <!-- Cmdlet parameter section -->
+
+  <command:parameters>
+
+    <!-- Credential -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Credential</maml:name>
+      <maml:description>
+        <maml:para>Specify credentials with permission to perform this action.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">PSCredential</command:parameterValue>
+      <dev:type>
+        <maml:name>PSCredential</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Identity -->
+    <command:parameter required="true" pipelineInput="true" globbing="false" position="named">
+      <maml:name>Identity</maml:name>
+      <maml:description>
+        <maml:para>WMI Management Path used to identify the zone. Accepts Identity Property returned by Get-DnsZone.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Server -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="1">
+      <maml:name>Server</maml:name>
+      <maml:description>
+        <maml:para>Specify the ServerName to operate on.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>localhost</dev:defaultValue>
+    </command:parameter>
+
+  </command:parameters>
+
+  <!-- Input - Output section -->
+  <command:inputTypes />
+  <command:returnValues />
+
+  <!-- Error section-->
+
+  <command:terminatingErrors />
+  <command:nonTerminatingErrors />
+
+  <!-- Notes section  -->
+
+  <maml:alertSet />
+
+  <!-- Example section  --> 
+
+  <command:examples>
+
+    <command:example>
+      <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+      <maml:introduction>
+        <maml:para>C:\PS&gt; </maml:para>
+      </maml:introduction> 
+      <dev:code>Get-DnsZone -Name example.com | Suspend-DnsZone</dev:code>
+      <dev:remarks>
+        <maml:para>Pauses the example.com zone on localhost.</maml:para>
+      </dev:remarks>
+      <command:commandLines>
+        <command:commandLine>
+          <command:commandText></command:commandText>
+        </command:commandLine>
+      </command:commandLines>
+    </command:example>
+
+  </command:examples>
+
+  <!-- Link section  -->
+  <maml:relatedLinks />
+</command:command>
+
+<!-- Update-DnsZoneFile -->
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+  <command:details>
+    <command:name>Update-DnsZoneFile</command:name>
+
+    <maml:description>
+      <maml:para>Update a DNS zone file from running zone.</maml:para>
+    </maml:description>
+    <maml:copyright>
+      <maml:para></maml:para>
+    </maml:copyright>
+
+    <command:verb>Update</command:verb>
+    <command:noun>DnsZoneFile</command:noun>
+    <dev:version></dev:version>
+  </command:details>
+
+  <maml:description>
+    <maml:para>Update-DnsZoneFile calls the WriteBackZone method on an instance of MicrosoftDNS_Zone.</maml:para>
+  </maml:description>
+
+  <!-- Cmdlet syntax section-->
+
+  <command:syntax>
+
+    <command:syntaxItem>
+      <maml:name>Update-DnsZoneFile</maml:name>
+
+      <!-- Identity -->
+      <command:parameter required="true">
+        <maml:name>Identity</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+  </command:syntax>
+
+  <!-- Cmdlet parameter section -->
+
+  <command:parameters>
+
+    <!-- Credential -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Credential</maml:name>
+      <maml:description>
+        <maml:para>Specify credentials with permission to perform this action.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">PSCredential</command:parameterValue>
+      <dev:type>
+        <maml:name>PSCredential</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Identity -->
+    <command:parameter required="true" pipelineInput="true" globbing="false" position="named">
+      <maml:name>Identity</maml:name>
+      <maml:description>
+        <maml:para>WMI Management Path used to identify the zone. Accepts Identity Property returned by Get-DnsZone.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Server -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="1">
+      <maml:name>Server</maml:name>
+      <maml:description>
+        <maml:para>Specify the ServerName to operate on.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>localhost</dev:defaultValue>
+    </command:parameter>
+
+  </command:parameters>
+
+  <!-- Input - Output section -->
+  <command:inputTypes />
+  <command:returnValues />
+
+  <!-- Error section-->
+
+  <command:terminatingErrors />
+  <command:nonTerminatingErrors />
+
+  <!-- Notes section  -->
+
+  <maml:alertSet />
+
+  <!-- Example section  --> 
+
+  <command:examples>
+
+    <command:example>
+      <maml:title>-------------------------- EXAMPLE 1 --------------------------</maml:title>
+      <maml:introduction>
+        <maml:para>C:\PS&gt; </maml:para>
+      </maml:introduction> 
+      <dev:code>Get-DnsZone -Name example.com | Update-DnsZoneFile</dev:code>
+      <dev:remarks>
+        <maml:para>Writes the example.com zone held in memory back to the zone file.</maml:para>
+      </dev:remarks>
+      <command:commandLines>
+        <command:commandLine>
+          <command:commandText></command:commandText>
+        </command:commandLine>
+      </command:commandLines>
+    </command:example>
+
+  </command:examples>
+
+  <!-- Link section  -->
+  <maml:relatedLinks />
+</command:command>
+
+<!-- Get-ADDnsRecord -->
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+  <command:details>
+    <command:name>Get-ADDnsRecord</command:name>
+
+    <maml:description>
+      <maml:para>Returns DNS Records using LDAP.</maml:para>
+    </maml:description>
+    <maml:copyright>
+      <maml:para></maml:para>
+    </maml:copyright>
+
+    <command:verb>Get</command:verb>
+    <command:noun>ADDnsRecord</command:noun>
+    <dev:version></dev:version>
+  </command:details>
+
+  <maml:description>
+    <maml:para>Get-ADDnsRecord returns records from Active Directory.</maml:para>
+  </maml:description>
+
+  <!-- Cmdlet syntax section-->
+
+  <command:syntax>
+
+    <command:syntaxItem>
+      <maml:name>Get-ADDnsRecord</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- SearchRoot -->
+      <command:parameter required="false">
+        <maml:name>SearchRoot</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+  </command:syntax>
+
+  <!-- Cmdlet parameter section -->
+
+  <command:parameters>
+
+    <!-- Credential -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Credential</maml:name>
+      <maml:description>
+        <maml:para>Specify credentials with permission to perform this action.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">PSCredential</command:parameterValue>
+      <dev:type>
+        <maml:name>PSCredential</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Name -->
+    <command:parameter required="false" pipelineInput="false" globbing="true" position="1">
+      <maml:name>Name</maml:name>
+      <maml:description>
+        <maml:para>Used in the LDAP filter to match a record name.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- SearchRoot -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="named">
+      <maml:name>SearchRoot</maml:name>
+      <maml:description>
+        <maml:para>The search root, typically the distinguished name of a zone or partition.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>DC=DomainDnsZones,DC=&lt;Current Domain&gt;</dev:defaultValue>
+    </command:parameter>
+
+    <!-- Server -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="named">
+      <maml:name>Server</maml:name>
+      <maml:description>
+        <maml:para>Specify the ServerName(s) to operate on.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>&lt;Current Domain&gt;</dev:defaultValue>
+    </command:parameter>
+
+  </command:parameters>
+
+  <!-- Input - Output section -->
+  <command:inputTypes />
+  <command:returnValues />
+
+  <!-- Error section -->
+  <command:terminatingErrors />
+  <command:nonTerminatingErrors />
+
+  <!-- Notes section -->
+  <maml:alertSet />
+
+  <!-- Example section --> 
+  <command:examples />
+
+  <!-- Link section -->
+  <maml:relatedLinks />
+</command:command>
+
+<!-- Get-ADDnsZone -->
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+  <command:details>
+    <command:name>Get-ADDnsZone</command:name>
+
+    <maml:description>
+      <maml:para>Returns DNS Zones using LDAP.</maml:para>
+    </maml:description>
+    <maml:copyright>
+      <maml:para></maml:para>
+    </maml:copyright>
+
+    <command:verb>Get</command:verb>
+    <command:noun>ADDnsZone</command:noun>
+    <dev:version></dev:version>
+  </command:details>
+
+  <maml:description>
+    <maml:para>Get-ADDnsZone returns zones from Active Directory.</maml:para>
+  </maml:description>
+
+  <!-- Cmdlet syntax section-->
+
+  <command:syntax>
+
+    <command:syntaxItem>
+      <maml:name>Get-ADDnsZone</maml:name>
+
+      <!-- Name -->
+      <command:parameter required="false">
+        <maml:name>Name</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- SearchRoot -->
+      <command:parameter required="false">
+        <maml:name>SearchRoot</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+  </command:syntax>
+
+  <!-- Cmdlet parameter section -->
+
+  <command:parameters>
+
+    <!-- Credential -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Credential</maml:name>
+      <maml:description>
+        <maml:para>Specify credentials with permission to perform this action.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">PSCredential</command:parameterValue>
+      <dev:type>
+        <maml:name>PSCredential</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Name -->
+    <command:parameter required="false" pipelineInput="false" globbing="true" position="1">
+      <maml:name>Name</maml:name>
+      <maml:description>
+        <maml:para>Used in the LDAP filter to match a zone name.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- SearchRoot -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="named">
+      <maml:name>SearchRoot</maml:name>
+      <maml:description>
+        <maml:para>The search root, typically the distinguished name of a partition.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>DC=DomainDnsZones,DC=&lt;Current Domain&gt;</dev:defaultValue>
+    </command:parameter>
+
+    <!-- Server -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="named">
+      <maml:name>Server</maml:name>
+      <maml:description>
+        <maml:para>Specify the ServerName(s) to operate on.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>&lt;Current Domain&gt;</dev:defaultValue>
+    </command:parameter>
+
+  </command:parameters>
+
+  <!-- Input - Output section -->
+  <command:inputTypes />
+  <command:returnValues />
+
+  <!-- Error section -->
+  <command:terminatingErrors />
+  <command:nonTerminatingErrors />
+
+  <!-- Notes section -->
+  <maml:alertSet />
+
+  <!-- Example section --> 
+  <command:examples />
+
+  <!-- Link section -->
+  <maml:relatedLinks />
+</command:command>
+
+<!-- Get-ADDnsPartition -->
+
+<command:command xmlns:maml="http://schemas.microsoft.com/maml/2004/10" xmlns:command="http://schemas.microsoft.com/maml/dev/command/2004/10" xmlns:dev="http://schemas.microsoft.com/maml/dev/2004/10">
+  <command:details>
+    <command:name>Get-ADDnsPartition</command:name>
+
+    <maml:description>
+      <maml:para>Returns partitions from Active Directory.</maml:para>
+    </maml:description>
+    <maml:copyright>
+      <maml:para></maml:para>
+    </maml:copyright>
+
+    <command:verb>Get</command:verb>
+    <command:noun>ADDnsPartition</command:noun>
+    <dev:version></dev:version>
+  </command:details>
+
+  <maml:description>
+    <maml:para>Get-ADDnsPartition returns partitions which may host DNS zones from Active Directory.</maml:para>
+  </maml:description>
+
+  <!-- Cmdlet syntax section-->
+
+  <command:syntax>
+
+    <command:syntaxItem>
+      <maml:name>Get-ADDnsPartition</maml:name>
+
+      <!-- Server -->
+      <command:parameter required="false">
+        <maml:name>Server</maml:name>
+        <command:parameterValue required="true">String</command:parameterValue>
+      </command:parameter>
+
+      <!-- Credential -->
+      <command:parameter required="false">
+        <maml:name>Credential</maml:name>
+        <command:parameterValue required="true">PSCredential</command:parameterValue>
+      </command:parameter>
+
+    </command:syntaxItem>
+
+  </command:syntax>
+
+  <!-- Cmdlet parameter section -->
+
+  <command:parameters>
+
+    <!-- Credential -->
+    <command:parameter required="false" pipelineInput="false" globbing="false" position="named">
+      <maml:name>Credential</maml:name>
+      <maml:description>
+        <maml:para>Specify credentials with permission to perform this action.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">PSCredential</command:parameterValue>
+      <dev:type>
+        <maml:name>PSCredential</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue></dev:defaultValue>
+    </command:parameter>
+
+    <!-- Server -->
+    <command:parameter required="false" pipelineInput="true" globbing="false" position="named">
+      <maml:name>Server</maml:name>
+      <maml:description>
+        <maml:para>Specify the ServerName(s) to operate on.</maml:para>
+      </maml:description>
+      <command:parameterValue required="true">String</command:parameterValue>
+      <dev:type>
+        <maml:name>String</maml:name>
+        <maml:uri/>
+      </dev:type>
+      <dev:defaultValue>&lt;Current Domain&gt;</dev:defaultValue>
+    </command:parameter>
+
+  </command:parameters>
+
+  <!-- Input - Output section -->
+  <command:inputTypes />
+  <command:returnValues />
+
+  <!-- Error section -->
+  <command:terminatingErrors />
+  <command:nonTerminatingErrors />
+
+  <!-- Notes section -->
+  <maml:alertSet />
+
+  <!-- Example section --> 
+  <command:examples />
+
+  <!-- Link section -->
+  <maml:relatedLinks />
+</command:command>
+
+</helpItems>
